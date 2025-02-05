@@ -85,25 +85,18 @@ This step is for edge detection and creating a grayscale version of the original
 
 	1.	 img.loadPixels();: This loads the pixel data of the original image so that it can be accessed and manipulated.
 
- 
 	2.	edgeImg = createImage(img.width, img.height);: Creates an empty image with the same dimensions as the original image to store the processed pixel data.
-
  
 	3.	edgeImg.loadPixels();: Loads the pixel data for the empty image, which will be updated in the next steps.
 
- 
 	4.	Looping over each pixel: The loop iterates over every pixel in the original image (img). For each pixel, it:
-
  
 	•	Extracts the RGB values (red, green, and blue channels).
 
- 
 	•	Calculates a grayscale value by averaging the RGB values, which represents the pixel’s brightness.
 
- 
 	•	Assigns this grayscale value to the corresponding pixel in the edgeImg. This effectively converts the original image into a grayscale image.
 
- 
 	5.	edgeImg.pixels[loc + 3] = 255;: Sets the alpha (transparency) of each pixel to 255, making it fully opaque.
 	6.	edgeImg.updatePixels();: Updates the edgeImg pixel data after processing.
 	7.	edgeImg.filter(THRESHOLD, 0.5);: Applies a threshold filter that converts the grayscale image into a binary (black and white) image. The threshold value of 0.5 means that any pixel with a grayscale value above 128 (half of 255) will be set to white, and any pixel with a grayscale value below 128 will be set to black. This is useful for detecting the edges in the image.
