@@ -90,9 +90,9 @@ This step is for edge detection and creating a grayscale version of the original
 3.	edgeImg.loadPixels();: Loads the pixel data for the empty image, which will be updated in the next steps.
 
 4.	Looping over each pixel: The loop iterates over every pixel in the original image (img). For each pixel, it:
-•	Extracts the RGB values (red, green, and blue channels).
-•	Calculates a grayscale value by averaging the RGB values, which represents the pixel’s brightness.
-•	Assigns this grayscale value to the corresponding pixel in the edgeImg. This effectively converts the original image into a grayscale image.
+	Extracts the RGB values (red, green, and blue channels).
+	Calculates a grayscale value by averaging the RGB values, which represents the pixel’s brightness.
+	Assigns this grayscale value to the corresponding pixel in the edgeImg. This effectively converts the original image into a grayscale image.
 
 5.	edgeImg.pixels[loc + 3] = 255;: Sets the alpha (transparency) of each pixel to 255, making it fully opaque.
  
